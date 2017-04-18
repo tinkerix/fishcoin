@@ -1,6 +1,6 @@
-# robots.txt for http://tinkerix.com/
+# robots.txt for http://www.cell.fish/
 
 User-agent: *
-Sitemap: http://tinkerix.com/sitemap.xml
+Sitemap: http://www.cell.fish/sitemap.xml
 User-agent: *
 Disallow: /download.html

@@ -5,27 +5,27 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://tinkerix.com/</loc>
+  <loc>http://www.cell.fish/</loc>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://tinkerix.com/.</loc>
+  <loc>http://www.cell.fish/.</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tinkerix.com/careers.html</loc>
+  <loc>http://www.cell.fish/careers.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tinkerix.com/refund.html</loc>
+  <loc>http://www.cell.fish/refund.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tinkerix.com/privacy.html</loc>
+  <loc>http://www.cell.fish/privacy.html</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tinkerix.com/terms.html</loc>
+  <loc>http://www.cell.fish/terms.html</loc>
   <priority>0.80</priority>
 </url>
 </urlset>
