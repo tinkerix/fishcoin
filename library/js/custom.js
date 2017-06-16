@@ -118,7 +118,7 @@ function init() {
             html = document.documentElement;
             var scrollHeight = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
-            var bottomBar = $('.withlovebd');
+            var bottomBar = $('#footercopy');
             var heightByFooterPosition = bottomBar.position().top + bottomBar.height() + 14;
             return Math.min(scrollHeight,heightByFooterPosition);
         };
@@ -850,8 +850,63 @@ var touchScene = new ScrollMagic.Scene({triggerElement: "#howitworks", duration:
 var slider = $('.appscreens--phone-1st-fold .ui-slider');
 var slide = slider.find('.ui-slide');
 var slideCount = slide.length;
+
 var current = 1, prev = slideCount;
+var count=1;
 function ui_slider() {
+
+    $('#usagePic').click (function () {
+        current = 1;
+    });
+     $('#savingsPic').click (function () {
+        current = 2;
+    });
+      $('#settingsPic').click (function () {
+        current = 3;
+    });
+       $('#invoicePic').click (function () {
+        current = 4;
+    });
+
+     if(current == 1 )
+     {document.getElementById("usagePic").style.backgroundColor = "#499EC3";} 
+        else {document.getElementById("usagePic").style.backgroundColor = "white";}
+
+         if(current == 2 )
+     {document.getElementById("savingsPic").style.backgroundColor = "#499EC3";
+      count++;
+
+      if(count%4==2){
+     $("#botText2").fadeIn(1000);
+     $("#botText1").slideUp();}
+
+     if(count%4==3){
+          $("#botText3").fadeIn(1000);
+     $("#botText2").slideUp();
+     }
+
+      if(count%4==0){
+          $("#botText4").fadeIn(1000);
+     $("#botText3").slideUp();
+     }
+
+      if(count%4==1){
+          $("#botText1").fadeIn(1000);
+     $("#botText4").slideUp();
+     }
+
+ } 
+        else {document.getElementById("savingsPic").style.backgroundColor = "white";}
+
+            if(current == 3 )
+     {document.getElementById("settingsPic").style.backgroundColor = "#499EC3";} 
+        else {document.getElementById("settingsPic").style.backgroundColor = "white";}
+
+
+            if(current == 4 )
+     {document.getElementById("invoicePic").style.backgroundColor = "#499EC3";} 
+        else {document.getElementById("invoicePic").style.backgroundColor = "white";}
+
 
 	slider.addClass('slide-'+current);
 	slider.removeClass('slide-'+prev);
@@ -859,11 +914,14 @@ function ui_slider() {
 	if(current >= slideCount) {
 		current = 0;
 	}
-	current++;
-	
+    current++;
 }
 // ui_slider();
 // var moveSlide = setInterval(ui_slider, 2000);
+
+
+    
+
 
 
 var moveSlide;
@@ -904,22 +962,22 @@ function sceneProgress(event) {
 }
 
 
-
-
-
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-	$('.ui-feature').fadeOut();
-	switch( $(this).attr('href') ) {
-		case '#usage': $('#ui-feature-1').fadeIn();
-		break;
-		case '#recommendation': $('#ui-feature-2').fadeIn();
-		break;
-		case '#manage': $('#ui-feature-3').fadeIn();
-		break;
+    $('.ui-feature').fadeOut();
+    switch( $(this).attr('href') ) {
+        case '#usage': $('#ui-feature-1').fadeIn();
+        break;
+        case '#recommendation': $('#ui-feature-2').fadeIn();
+        break;
+        case '#manage': $('#ui-feature-3').fadeIn();
+        break;
         case '#bill': $('#ui-feature-4').fadeIn();
         break;
-	}
+    }
 });
+
+
+
 
 
 
@@ -1201,16 +1259,70 @@ $('input[type=tel]').on('keypress', function(event){
 // 	})
 // })
 
+  $(document).ready(function() { 
+    $('.firstList').click(function() { 
+      $('#1').fadeIn(1000); 
+      $('#2').fadeOut(10);
+      $('#3').fadeOut(10); 
+      $('#4').fadeOut(10);  
+  });
 
+       $('.secondList').click(function() { 
+      $('#1').fadeOut(10); 
+      $('#4').fadeOut(10);
+      $('#3').fadeOut(10);
+     $('#2').fadeIn(1000);
+      });
 
+          $('.thirdList').click(function() {
+      $('#1').fadeOut(10);
+      $('#2').fadeOut(10); 
+      $('#4').fadeOut(10);
+       $('#3').removeClass("phoneHide"); 
+        $('#3').addClass("phoneShow"); 
+     $('#3').fadeIn(1000); 
+       });
+        
+              $('.fourthList').click(function() {
+      $('#1').fadeOut(10);
+      $('#2').fadeOut(10); 
+      $('#3').fadeOut(10); 
+     $('#4').fadeIn(1000); 
+       });
+  });
+
+/*$('#mobileDisplayContainer').on('mousewheel', function (e) {
+var x =e.originalEvent.wheelDelta;
+
+var y = $('.phoneList').attr('id');
+console.log(y);
+
+if (x>=30)
+
+{ 
+  $('#1').slideUp(); 
+      $('#4').fadeOut(10);
+      $('#3').fadeOut(10);
+     $('#2').slideDown(); 
+}   
+
+if(x<= -30)
+{
+     $('#1').fadeOut(10);
+      $('#2').slideUp(); 
+      $('#4').fadeOut(10);
+     $('#3').fadeIn(1000); 
+}
+
+});*/
 
 
 var input_field;
 $('.si--input-form').each(function(){
-	$(this).submit(function(){
-		input_field = $(this).find('input[type=tel]');
-		return onSubmit(input_field);
-	})
+    $(this).submit(function(){
+        input_field = $(this).find('input[type=tel]');
+        return onSubmit(input_field);
+    })
 })
 
 
@@ -1222,4 +1334,4 @@ $('.si--input-form').each(function(){
 
 
 
-}); //document.ready
+}); 
