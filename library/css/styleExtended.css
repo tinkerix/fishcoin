@@ -7,6 +7,7 @@
 body {
   margin: 0;
 }
+
 article,
 aside,
 details,
@@ -4147,8 +4148,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
 }
 .navbar {
-  position: relative;
-  min-height: 50px;
   font-family: "Trebuchet MS","Helvetica",sans-serif;
 }
 @media (min-width: 768px) {
@@ -4250,11 +4249,42 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  height: 70px;
-  padding: 15px 15px 15px 70px;
-  font-size: 78px;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
   line-height: 20px;
+}
+
+.logotext {
+  font-size:50px;
+  padding:0;
   font-family:baveuse;
+}
+
+.logotext img {
+  height:100%;
+  width:60px;
+  padding:0;
+
+}
+
+@media (min-width: 768px){
+  .logotext img {
+margin-top:10px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .logotext {
+  font-size:30px;
+}
+  }
+
+@media (max-width:768px)
+{
+  .logotext {
+  font-size:30px;
+}
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4262,24 +4292,42 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand > img {
   display: block;
-}
-
-@media (max-width: 768px)
-{
-  .navbar-brand {
-  float: left;
-  height: 50px;
-  padding: 15px 15px;
-  font-size: 28px;
-  line-height: 20px;
-  font-family:baveuse;
-}
+  height:200%;
+  width:20%;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
   }
+}
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+  }
+}
+
+#signup a:link, a:visited {
+    
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#download a {
+    color: black;
+   margin-top:-0.3px;
+    text-decoration: none;
+
+}
+
+#myNavbar li a {
+  color:black;
+}
+
+#myNavbar li a:focus {
+  border-bottom:2px solid red;
 }
 .navbar-toggle {
   position: relative;
