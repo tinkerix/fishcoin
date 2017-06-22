@@ -2637,32 +2637,6 @@ display:inline;
     }
 
 }
-@media screen and (min-width: 768px)
-{  
-.plus {display:none;}
-}
-#signup a:link, a:visited {
-    
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-#download a {
-    color: black;
-   margin-top:-0.3px;
-    text-decoration: none;
-
-}
-
-#myNavbar li a {
-  padding-top:25px;
-  color:black;
-}
-
-#myNavbar li a:focus {
-  border-bottom:2px solid red;
-}
 
 
 /*#logo img { height:250%;
@@ -2675,7 +2649,7 @@ display:inline;
   padding-left:10px;
   overflow:hidden;
 }
-@media screen and (max-width:768px){.navbar-fixed-top {postion:default;}}
+
 
 /* Tob Bar */
 
@@ -2852,6 +2826,34 @@ padding-bottom:250px;
     }
 
 /*Career Page */
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px 5px 15px 15px;
+  width: auto;
+}
+.example3 .navbar-brand {
+  height: 80px;
+}
+.example3 .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.example3 .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+
+
+
+
+
+
+
+
 
 
 
