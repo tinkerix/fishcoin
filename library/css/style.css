@@ -2293,8 +2293,7 @@ padding-top:0;
     height:150px;
     width:150px;
     border-radius: 50%;
-   
-  }
+    }
 
   .userText{
     padding:5px 10px 10px 5px;
@@ -2332,8 +2331,13 @@ padding-top:0;
    background:linear-gradient(to right, #ECE9E6 , #FFFFFF);
 }
 #team {
-  background:linear-gradient(to right, #ECE9E6 , #FFFFFF);
+  background-color:#06273b;
   font-family: "Trebuchet MS","Helvetica",sans-serif;
+  color:white;
+}
+
+.founders {
+  background-color: #06273b;
 }
 
 .teamTitle { color:black;
@@ -2884,7 +2888,6 @@ padding-bottom:250px;
 #features{
   background:linear-gradient(to right, #000000 , #444444);
 }
-
 
 
 /*# sourceMappingURL=style.css.map */

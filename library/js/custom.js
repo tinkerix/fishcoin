@@ -118,7 +118,7 @@ function init() {
             html = document.documentElement;
             var scrollHeight = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
-            var bottomBar = $('#footercopy');
+            var bottomBar = $('.footerCopyright');
             var heightByFooterPosition = bottomBar.position().top + bottomBar.height() + 14;
             return Math.min(scrollHeight,heightByFooterPosition);
         };
