@@ -2286,17 +2286,18 @@ padding-top:0;
 .testimonee {
   margin: 30px auto 0; }
 .userImage{
-  padding-top:4%;
+  padding-top:10px;
+  padding-bottom:10px;
 }
   .userImage img {
-    height:100%;
-    width:100%;
+    height:150px;
+    width:150px;
     border-radius: 50%;
    
   }
 
   .userText{
-    padding-top:5%;
+    padding:5px 10px 10px 5px;
   }
 
 .testimonee__image {
@@ -2856,18 +2857,33 @@ padding-bottom:250px;
 }
 
 .headerSeparator {
-  height:;
+  background-color:transparent;
+  height:108px;
 }
 
+.featureList {
+  display:inline-block; text-align: center;
+}
 
+.featurePic { cursor:pointer; border-radius:50%; background-color:white;
+}
 
+#usagePic {
+  padding:4%;
+}
+#savingsPic{
+  padding:15%;
+}
+#settingsPic{
+  padding:14%;
+}
+#invoicePic{
+  padding:9%;
+}
 
-
-
-
-
-
-
+#features{
+  background:linear-gradient(to right, #000000 , #444444);
+}
 
 
 
