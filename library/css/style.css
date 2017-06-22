@@ -2331,14 +2331,11 @@ padding-top:0;
    background:linear-gradient(to right, #ECE9E6 , #FFFFFF);
 }
 #team {
-  background-color:#06273b;
+  
   font-family: "Trebuchet MS","Helvetica",sans-serif;
   color:white;
 }
 
-.founders {
-  background-color: #06273b;
-}
 
 .teamTitle { color:black;
   font-size:30px;
@@ -2884,6 +2881,7 @@ padding-bottom:250px;
 #invoicePic{
   padding:9%;
 }
+
 
 #features{
   background:linear-gradient(to right, #000000 , #444444);
