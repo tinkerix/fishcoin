@@ -182,7 +182,7 @@ Please contact us at <b>support@tinkerix.com</b> for any concerns, issues or que
 <div class = "termsSeparator col-xs-12 col-sm-12 col-md-12">&nbsp;</div>.
 </div>
 
-     <div class = "hidden-xs col-sm-12 col-md-12 col-lg-12" style = "background:transparent;height:10px;"></div>
+          <div class = "hidden-xs col-sm-12 col-md-12 col-lg-12" style = "background:transparent;height:10px;"></div>
 
  <div class = "homeFooter hidden-xs col-sm-12 col-md-12 col-lg-12">
     <div class = "col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
@@ -234,101 +234,66 @@ Please contact us at <b>support@tinkerix.com</b> for any concerns, issues or que
         </div>              </div>
     </div>
         <div class = "col-xs-12 visible-xs">
-          <div class="demo">
-        <div class="panel2-group" id="accordion" role="tablist" aria-multiselectable="true">
-           <br><br>
-          <div class="panel2 panel2-default">
-            <div class="panel2-heading" role="tab" id="headingfive">
-                <h4 class="panel2-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                        <strong>Support</strong>
-                    </a>
-                </h4>
-            </div>
-            <div id="collapsefive" class="panel2-collapse collapse" role="tabpanel2" aria-labelledby="headingfive">
-                <div class="panel2-body">
-                   <ul class="unstyled">
+           <button class="accordion">Support</button>
+<div class="panel">
+      <ul class="unstyled">
           
           <li class = "footer-col-item"><a href="./faq.html">FAQ</a></li>
           <li class = "footer-col-item"><a href="./contactus.html">Contact Us</a></li>
           <li class = "footer-col-item"><a href="#"><!--Feedback--></a></li>             
         </ul>
-                </div>
-            </div>
-            <br>
+</div>
 
-            <div class="panel2 panel2-default">
-            <div class="panel2-heading" role="tab" id="headingfour">
-                <h4 class="panel2-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                       <strong>Legal</strong>
-                    </a>
-                </h4>
-            </div>
-            <div id="collapsefour" class="panel2-collapse collapse" role="tabpanel2" aria-labelledby="headingfour">
-                <div class="panel2-body">
-                      <ul class="unstyled">
-          
+<button class="accordion">Legal</button>
+<div class="panel">         
+  <ul class="unstyled">
           <li class = "footer-col-item"><a href="./termsandconditions.html">Terms and Conditions</a></li>
           <li class = "footer-col-item"><a href="./privacypolicy.html">Privacy</a></li>
           <li class = "footer-col-item"><a href="./refunds.html">Refund</a></li>             
         </ul>
-                </div>
-        </div>         
-    </div>
-    <br>
+</div>
 
-    <div class="panel2 panel2-default">
-            <div class="panel2-heading" role="tab" id="headingsix">
-                <h4 class="panel2-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                       <strong>Our Company</strong>
-                    </a>
-                </h4>
-            </div>
-            <div id="collapsesix" class="panel2-collapse collapse" role="tabpanel2" aria-labelledby="headingsix">
-                <div class="panel2-body">
-                      <ul class="unstyled">
-          
+<button class="accordion">Our Company</button>
+<div class="panel">
+  <ul class="unstyled"> 
           <li class = "footer-col-item"><a href="./about.html">About Us</a></li>
           <li class = "footer-col-item"><a href="./career.html">Careers</a></li>
           <li class = "footer-col-item"><a href="#"><!--Investor Relationships--></a></li>             
         </ul>
-                </div>
-        </div>         
-    </div>
-    <br>
-     <div class="panel2 panel2-default">
-            <div class="panel2-heading" role="tab" id="headingseven">
-                <h4 class="panel2-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                       <strong>Resources</strong>
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseseven" class="panel2-collapse collapse" role="tabpanel2" aria-labelledby="headingseven">
-                <div class="panel2-body">
-                      <ul class="unstyled">
-          <li class = "footer-col-item"><a href="#">Blog</a></li>          
+</div>
+
+<button class="accordion">Resources</button>
+<div class="panel">
+           <ul class="unstyled">
+          <li class = "footer-col-item"><a href="./blog.html">Blog</a></li>          
         </ul>
-          </div>
-        </div>         
-    </div>
-  </div>
 </div>
+
 </div>
   
   
-    </div>
+    </div>    <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
       <div class = "footerCopyright text-center">
   <br>Connect with Us: <a href="http://www.facebook.com/TinkerixTechnology"><img width = "50px" src = "./images/socialMedia/footer/Facebook.png">&nbsp;</a><a href = "http://www.twitter.com/cellfishapp"> <img width = "50px" src = "./images/socialMedia/footer/Twitter.png">&nbsp;</a> <a href = "https://www.youtube.com/channel/UCiVTDyRvsLBFes78xtobzVQ"><img width = "50px" src = "./images/socialMedia/footer/Youtube.png"></a> <br><br>
   <div class = "footerCopyright text-center">
   Copyright Tinkerix Technology Pvt Ltd</div>
   </div>
+
+<script type="text/javascript" src="library/js/custom.js"></script>
 
 </body>
 </html>
