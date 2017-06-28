@@ -923,12 +923,6 @@ function ui_slider() {
 }
 // ui_slider();
 // var moveSlide = setInterval(ui_slider, 2000);
-
-
-    
-
-
-
 var moveSlide;
 // scene.on("leave", sceneLeave);
 function sceneLeave() {
