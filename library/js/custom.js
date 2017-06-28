@@ -852,7 +852,7 @@ var slide = slider.find('.ui-slide');
 var slideCount = slide.length;
 
 var current = 1, prev = slideCount;
-var count=1;
+var count=1; var count1=2;
 function ui_slider() {
 
     $('#usagePic').click (function () {
@@ -880,20 +880,13 @@ function ui_slider() {
      $("#botText2").fadeIn(1000);
      $("#botText1").slideUp();}
 
-     if(count%4==3){
-          $("#botText3").fadeIn(1000);
-     $("#botText2").slideUp();
-     }
 
       if(count%4==0){
           $("#botText4").fadeIn(1000);
      $("#botText3").slideUp();
      }
 
-      if(count%4==1){
-          $("#botText1").fadeIn(1000);
-     $("#botText4").slideUp();
-     }
+    
 
  } 
         else {document.getElementById("savingsPic").style.backgroundColor = "white";}
@@ -904,7 +897,19 @@ function ui_slider() {
 
 
             if(current == 4 )
-     {document.getElementById("invoicePic").style.backgroundColor = "#499EC3";} 
+     {document.getElementById("invoicePic").style.backgroundColor = "#499EC3";
+            count++;
+
+
+     if(count%4==3){
+          $("#botText3").fadeIn(1000);
+     $("#botText2").slideUp();
+     }
+       if(count%4==1){
+          $("#botText1").fadeIn(1000);
+     $("#botText4").slideUp();
+     }
+           } 
         else {document.getElementById("invoicePic").style.backgroundColor = "white";}
 
 
@@ -936,7 +941,7 @@ function sceneLeave() {
 function sceneEnter() {
 	$('.appscreens--phone-1st-fold').show();
 	$('.appscreens--phone-2nd-fold').hide();
-	moveSlide = setInterval(ui_slider, 2000);
+	moveSlide = setInterval(ui_slider, 3600);
 }
 
 

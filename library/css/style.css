@@ -2029,26 +2029,19 @@ textarea {
 input[type=submit] {
     font-size:100%;
     color: black;
-    padding: 14px 20px;
+    padding:10px;
     margin: 8px 0;
     border: none;
-    height:60%;
     border-radius: 2px;
     cursor: pointer;
     background-color:orange;
-}
-input[type=submit]:hover {
-   background-color:red;
-    }
-    
+}    
     input[type=number]{
     text-align:center;
-    height:50px;
-    width:200px;
     font-family:"Helvetica";
     color:black;
     border-radius: 4px;
-    padding: 4px 0px;
+    padding: 10px;
     }
 
     input[type=number]:visited {
@@ -2876,10 +2869,10 @@ padding-bottom:250px;
   padding:4%;
 }
 #savingsPic{
-  padding:15%;
+  padding:10%;
 }
 #settingsPic{
-  padding:14%;
+  padding:9%;
 }
 #invoicePic{
   padding:9%;
