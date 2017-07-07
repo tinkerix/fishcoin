@@ -114,7 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TN9QXG4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->  <!-- Nav -->
-   <div class="example3">
+ <div class="example3">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -129,10 +129,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./contactus.html">Contact Us</a></li>          
-          <li><a href="./career.html">Career</a></li>
-          <li><a href = "https://play.google.com/store/apps/details?id=com.tinkerix.cellfish&hl=en"><img style = "width:100px; margin-top:-5px" src = "./images/playstore1.png"></a></li>
+          <li class = "text-center"><a href="./about.html">About</a></li>
+          <li class=  "text-center"><a href="./contactus.html">Contact Us</a></li> 
+          <li class=  "text-center"><a href="./blog.html">Blog</a></li>          
+          <li class=  "text-center"><a href="./career.html">Career</a></li>
+          <li class=  "text-center"><a href = "https://play.google.com/store/apps/details?id=com.tinkerix.cellfish&hl=en"><img id = "playstoreImage"  src = "./images/playstore1.png"></a></li>
+          <li class = " visible-xs col-xs-6 col-xs-offset-3 text-center">
+          <a class = "col-xs-3" href = "http://www.facebook.com/TinkerixTechnology"><i style="font-size:18px;" class="fa">&#xf09a;</i></a>
+          <a class = "col-xs-3" href = "http://www.linkedin.com"><i style="font-size:18px" class="fa">&#xf0e1;</i></a>
+          <a class = "col-xs-3" href = "http://www.twitter.com/cellfishapp"><i style="font-size:18px" class="fa">&#xf099;</i></a>
+          <a class = "col-xs-3" href = "https://www.youtube.com/channel/UCiVTDyRvsLBFes78xtobzVQ"><i style="font-size:18px" class="fa">&#xf16a;</i></a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -177,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id ="serv" class = "footer-col">
 
         <ul class="unstyled">
-           <li class = "footer-col-item"><a href="./aboutus.html">About Us</a></li>
+           <li class = "footer-col-item"><a href="./about.html">About Us</a></li>
           <li class = "footer-col-item"><a href="./career.html">Careers</a></li>
           <li class = "footer-col-item"><a href="#"><!--Investor Relationships--></a></li>             
         </ul>
@@ -236,11 +242,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
     </div>
 
-    <script>
+<script>
 var acc = document.getElementsByClassName("accordion");
-var i;
+var panels = document.getElementsByClassName("panel");
+var i; var j;
 for (i = 0; i < acc.length; i++) {
-  acc[i].onclick = function() {
+  acc[i].onclick = function() { 
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight){
@@ -248,10 +255,15 @@ for (i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
+        for(var j=0;j<acc.length;j++){ 
+          if(acc[j]!==this){
+            panels[j].style.maxHeight = null;
+            acc[j].classList ='accordion';
+          }
+        }
   }
 }
 </script>
-
       <div class = "footerCopyright text-center">
   <br>Connect with Us: <a href="http://www.facebook.com/TinkerixTechnology"><img width = "50px" src = "./images/socialMedia/footer/Facebook.png">&nbsp;</a><a href = "http://www.twitter.com/cellfishapp"> <img width = "50px" src = "./images/socialMedia/footer/Twitter.png">&nbsp;</a> <a href = "https://www.youtube.com/channel/UCiVTDyRvsLBFes78xtobzVQ"><img width = "50px" src = "./images/socialMedia/footer/Youtube.png"></a> <br><br>
   <div class = "footerCopyright text-center">

@@ -690,17 +690,6 @@ if (wheelEvent) {
 })();
 
 
-
-
-
-
-
-
-
-
-
-
-
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
 // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
 // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
@@ -850,11 +839,11 @@ var touchScene = new ScrollMagic.Scene({triggerElement: "#howitworks", duration:
 var slider = $('.appscreens--phone-1st-fold .ui-slider');
 var slide = slider.find('.ui-slide');
 var slideCount = slide.length;
+var currSlide = 0;
 
 var current = 1, prev = slideCount;
 var count=1; var count1=2;
 function ui_slider() {
-
     $('#usagePic').click (function () {
         current = 1;
     });
@@ -867,37 +856,42 @@ function ui_slider() {
        $('#invoicePic').click (function () {
         current = 4;
     });
-
      if(current == 1 )
-     {document.getElementById("usagePic").style.backgroundColor = "#499EC3";} 
+     {document.getElementById("usagePic").style.backgroundColor = "#499EC3";
+ /*$("#gif2").fadeIn(1000);
+     $("#gif1").slideUp();*/} 
         else {document.getElementById("usagePic").style.backgroundColor = "white";}
 
          if(current == 2 )
      {document.getElementById("savingsPic").style.backgroundColor = "#499EC3";
+  /*$("#gif3").fadeIn(1000);
+     $("#gif2").slideUp();*/
       count++;
 
       if(count%4==2){
      $("#botText2").fadeIn(1000);
-     $("#botText1").slideUp();}
+     $("#botText1").slideUp();
+        }
 
 
       if(count%4==0){
           $("#botText4").fadeIn(1000);
      $("#botText3").slideUp();
      }
-
-    
-
  } 
         else {document.getElementById("savingsPic").style.backgroundColor = "white";}
 
             if(current == 3 )
-     {document.getElementById("settingsPic").style.backgroundColor = "#499EC3";} 
+     {document.getElementById("settingsPic").style.backgroundColor = "#499EC3";
+/*$("#gif4").fadeIn(1000);
+     $("#gif3").slideUp();*/} 
         else {document.getElementById("settingsPic").style.backgroundColor = "white";}
 
 
             if(current == 4 )
      {document.getElementById("invoicePic").style.backgroundColor = "#499EC3";
+       /*$("#gif1").fadeIn(1000);
+     $("#gif4").slideUp();*/
             count++;
 
 
@@ -908,17 +902,15 @@ function ui_slider() {
        if(count%4==1){
           $("#botText1").fadeIn(1000);
      $("#botText4").slideUp();
-     }
-           } 
+     } } 
         else {document.getElementById("invoicePic").style.backgroundColor = "white";}
-
 
 	slider.addClass('slide-'+current);
 	slider.removeClass('slide-'+prev);
 	prev = current;
 	if(current >= slideCount) {
 		current = 0;
-	}
+    }
     current++;
 }
 // ui_slider();
@@ -961,12 +953,12 @@ function sceneProgress(event) {
 }
 
 
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+$('.featuresLink').on('click', function (e) {
     $('.ui-feature').fadeOut();
-    switch( $(this).attr('href') ) {
+    switch( $(this).attr('href') ) { 
         case '#usage': $('#ui-feature-1').fadeIn();
         break;
-        case '#recommendation': $('#ui-feature-2').fadeIn();
+        case '#recommendation': $('#ui-feature-2').fadeIn(); 
         break;
         case '#manage': $('#ui-feature-3').fadeIn();
         break;
@@ -1099,6 +1091,7 @@ $(window).on('resize', function(){
 
 
 var acc = document.getElementsByClassName("accordion");
+var panels = document.getElementsByClassName("panel");
 var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].onclick = function() {
@@ -1109,6 +1102,12 @@ for (i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
+        for(var j=0;j<acc.length;j++){ 
+          if(acc[j]!==this){
+            panels[j].style.maxHeight = null;
+            acc[j].classList ='accordion';
+          }
+        }
   }
 }
 
@@ -1302,39 +1301,10 @@ $('input[type=tel]').on('keypress', function(event){
        });
   });
 
-/*$('#mobileDisplayContainer').on('mousewheel', function (e) {
-var x =e.originalEvent.wheelDelta;
-
-var y = $('.phoneList').attr('id');
-console.log(y);
-
-if (x>=30)
-
-{ 
-  $('#1').slideUp(); 
-      $('#4').fadeOut(10);
-      $('#3').fadeOut(10);
-     $('#2').slideDown(); 
-}   
-
-if(x<= -30)
-{
-     $('#1').fadeOut(10);
-      $('#2').slideUp(); 
-      $('#4').fadeOut(10);
-     $('#3').fadeIn(1000); 
-}
-
-});*/
 
 
-var input_field;
-$('.si--input-form').each(function(){
-    $(this).submit(function(){
-        input_field = $(this).find('input[type=tel]');
-        return onSubmit(input_field);
-    })
-})
+
+
 
 
 

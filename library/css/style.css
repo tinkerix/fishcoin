@@ -2019,28 +2019,46 @@ textarea {
   padding: 100px 0 50px; }
 
 .mobile-1--content {
-  position: relative; }
+  position: relative;
+  top:-40px; }
 
 .botText {
   font-family: "Trebuchet MS","Helvetica",sans-serif;
-    font-size:34px; color:#02307B;
+    font-size:32px; color:#02307B;
 }
 
+.featuresText{
+  font-size:18px;
+  padding:10px;
+}
+.botTextContainer {
+  height:100px;
+  overflow:hidden;
+}
+@media(min-width:991px){
+.botTextContainer {
+  height:92px;
+  overflow:hidden;
+}
+}
 input[type=submit] {
     font-size:100%;
     color: black;
     padding:10px;
     margin: 8px 0;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
-    background-color:orange;
+    background-color:#EC6E4E;
 }    
     input[type=number]{
     text-align:center;
     font-family:"Helvetica";
     color:black;
+    margin: 8px 0;
     border-radius: 4px;
+    border:2px solid #74CDEB;
+     width:100%;
     padding: 10px;
     }
 
@@ -2069,7 +2087,8 @@ input[type=submit] {
   .backstrech__wrapper .backstrech__image {
     height: 100%;
     width: 100%;
-    background:linear-gradient(to right, #F3A84B, #F1C24C);
+    /*background:linear-gradient(to right, #F3A84B, #F1C24C);*/
+    background-color:white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top; }
@@ -2324,8 +2343,7 @@ padding-top:0;
    background:linear-gradient(to right, #ECE9E6 , #FFFFFF);
 }
 #team {
-  
-  font-family: "Trebuchet MS","Helvetica",sans-serif;
+    font-family: "Trebuchet MS","Helvetica",sans-serif;
   color:white;
 }
 
@@ -2633,58 +2651,66 @@ display:inline;
 
 }
 
-
-/*#logo img { height:250%;
-  padding-left:40%;
-  margin-top:-18%;
-}*/
-
-.botTextContainer {
-  height:60px;
-  padding-left:10px;
-  overflow:hidden;
-}
-
-
-/* Tob Bar */
-
-
-/* Tob Bar */
-
-
 /*Career Page */ 
-
 #backgroundWrapper {
-  height:680px;
-  width:100%;
-  background-size:cover;
+      height:100%;
+      background-image: url('./images/career/thubcareers.jpg');
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  cover;
 }
 
 }
 .careerText{
-padding-top:350px;
+padding-top:380px;
   color:black;
   font-family: "adelle-sans", "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:44px;
+  font-size:50px;
 }
 
 @media screen and (max-width:767px)
 {
   .careerText{
-padding-top:250px;
-padding-bottom:250px;
+padding-top:360px;
+padding-bottom:270px;
   color:black;
-  font-size:34px;
+  font-size:40px;
+}
+#backgroundWrapper {
+      height:100%;
+      
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  100% 100%;
+}
 }
 
-#backgroundWrapper {
+#text1, #text2, #text3, #text4 {
+  margin:0;
+  padding:0;
   width:100%;
 }
 
+.heading{
+    padding:10px; margin:0; font-size:22px; width:100%;
 }
 
+.heading1{background-color:#05B9CC;}
+.heading2{background-color:#F19100;}
+.heading3{background-color:#E64C37;}
+.heading4{background-color:#452583;}
+.sub-heading{
+padding:5px; margin:0; color:black; font-size:15px
+} 
+.phone-text-wrapper{padding:0; margin-top:0px; width:100%; overflow: hidden; height:150px;}
+.phone-text{height:150px; padding:0;margin:0;width:100%;}
+.phoneScreen1 {
+  background-color: white;
+}
 #careerMain {
-  background:linear-gradient(to right, #B57BDA, #C395E1);
+ background-position:center center;
+      background-repeat:  no-repeat;
+      background-size:  100% 100%;
 }
 
 #whyTinkerix h3 {
@@ -2698,14 +2724,6 @@ padding-bottom:250px;
   font-family: "adelle-sans", "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
-
-
-
-
-
-
-
 #screenShots {
   background-color: black; 
   position:absolute;
@@ -2717,6 +2735,10 @@ padding-bottom:250px;
 .phoneSmall img {
   width:200px;
   margin-left:70px;
+}
+
+.phoneSeparator {
+  height:30px;
 }
 
 @media screen and (max-width:767px)
@@ -2822,30 +2844,46 @@ padding-bottom:250px;
 
 /*Career Page */
 
+#playstoreImage {
+  width:100px;
+  margin-top:-5px;
+  border:3px solid white;
+  border-radius:10px;
+}
+
+
 .navbar-brand {
   padding: 0px;
 }
 .navbar-brand>img {
   height: 100%;
-  padding: 15px;
+  padding: 5px;
   width: auto;
-}
-.example3 .navbar-brand {
-  height: 80px;
-}
-.example3 .nav >li >a {
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 @media (max-width:768px){
   .example3 .nav >li >a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size:20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size:14px;
+}
+
+.navbar-right, .navbar-nav, .nav{
+  background-color: white;
+
 }
 .example3 .navbar-brand {
   height: 60px;
+}
+
+#playstoreImage {
+  width:150px;
+}
+
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
 }
 }
 .example3 .navbar-toggle {
@@ -2862,7 +2900,7 @@ padding-bottom:250px;
   display:inline-block; text-align: center;
 }
 
-.featurePic { cursor:pointer; border-radius:50%; background-color:white;
+.featurePic { cursor:pointer; border-radius:50%; border:1px solid black;
 }
 
 #usagePic {
@@ -2878,11 +2916,35 @@ padding-bottom:250px;
   padding:9%;
 }
 
+@media (max-width:991px)
+{
+  #usagePic {
+  padding:4%;
+}
+#savingsPic{
+  padding:17%;
+}
+#settingsPic{
+  padding:16%;
+}
+#invoicePic{
+  padding:16%;
+}
+}
+
+.newsPara{
+  text-align:center; padding-top:1%; font-weight:bold;color:orange;font-size:20px;
+}
 
 #features{
   background:linear-gradient(to right, #000000 , #444444);
-}
+ }
 
+@media(max-width:767px){
+  .pressbox{margin-top:-430px;}
+
+  .pressbox img {width:30%;}
+}
 
 button.accordion {
     background-color: transparent;
@@ -2929,5 +2991,59 @@ div.panel {
     transition: max-height 0.2s ease-out;
 }
 
+.properties {
+  width:100%;
+  padding:5px;
+  margin:0;
+}
 
+.phoneScreen {
+  margin-left:2%;
+  display:block;
+  position:relative;
+  width:100%;
+}
+
+.phone-bg-wrapper{
+  margin-left:2%;
+      overflow: hidden;
+    position: absolute;
+    top: 19.7%;
+    left: 8.3%;
+    height: 59.8%;
+    width: 77.5%;
+    background-color: red;
+}
+
+.phone-bg {
+      position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    opacity: 1;
+}
+
+.phoneScreenWrapper {
+  background-color: red;
+  height:100px;
+  width:100px;
+}
+
+#text1{
+  transition: all 0.6s ease-in;
+}
+#mobileDisplayContainer {
+  width:100%;
+  padding:0;
+  margin:0;
+}
+
+#gifList{
+  transition: all 0.7s ease;
+}
+
+#phoneTextList {
+  transition: all 0.7s ease;
+}
 /*# sourceMappingURL=style.css.map */
