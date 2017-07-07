@@ -192,7 +192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- App Screens -->
     <div class="container full-h" >
       <div class="row full-h"  >
-        <div class="_container__mobile-1--outer is-table full-wh"  >
+        <div id = "phoneScreen1" class="_container__mobile-1--outer is-table full-wh"  >
           <div class="mobile-1--center v-center" >
             <div class="mobile-1--content col-sm-7 col-sm-offset-0 col-md-8 col-md-offset-0" >
           <div class = "hidden-xs col-sm-12 col-xs-12 col-lg-12 col-md-12">
@@ -278,7 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
           <div  class = "col-xs-12 gif text-center " style = " position:relative; bottom:464px; right:7px; height:380px; overflow: hidden ">
-          <div id = "phoneScreen1" class = "gif-wrapper" style = "height:380px;;">
+          <div  class = "gif-wrapper" style = "height:380px;;">
           <ul id = "gifList">
            <li class = "gif" id="gif1" > <img  id = "rechargegif"  width = "212px" src = "./images/gif/recharge.gif"></li>
            <li class = "gif" id = "gif2"> <img  id = "savegif" width = "212px" src = "./images/gif/Cut-your-Mobile-bill.gif"></li>
@@ -700,7 +700,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Press -->
 
-    <div class="_container _container--press pressbox">
+    <div  id = "news" class="_container _container--press pressbox">
     <div class = "col-xs-12 col-sm-12">
     <p class = "newsPara"><strong>Tinkerix In The News</strong></p>
     </div>
@@ -998,7 +998,10 @@ mc.on("swipeup", function(ev) {
      if(currSlide===2)  { f.style.transform = "translateY(-760px)"; g.style.transform = "translateY(-300px)";}
      if(currSlide===3)
      {  f.style.transform = "translateY(-1138px)"; g.style.transform = "translateY(-450px)";
+
      }
+
+     if(currSlide>3){currSlide=3; window.scroll(0,findPos(document.getElementById("news")));}
  
 });
 mc.on("swipedown", function(ev) { 
@@ -1016,6 +1019,8 @@ mc.on("swipedown", function(ev) {
   });
 
 
+
+
   if(window.matchMedia) {  document.write(unescape("%3Cscript src='library/js/enquire.min.js' type='text/javascript'%3E%3C/script%3E"));
     document.write(unescape("%3Cscript src='library/js/custom.js' type='text/javascript'%3E%3C/script%3E"));
   } else {
@@ -1025,6 +1030,17 @@ mc.on("swipedown", function(ev) {
   }
 
 
+</script>
+<script>
+  function findPos(obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    return [curtop];
+    }
+}
 </script>
 
 <!--<script type="text/javascript" src="library/dist/build.min.js"></script>-->
