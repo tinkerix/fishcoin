@@ -991,7 +991,7 @@ mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
   // listen to events...
   var currSlide=0;
 mc.on("swipeup", function(ev) { 
-  currSlide++;
+  currSlide++; window.scroll(0,0);
         var f = document.getElementById('gifList');
         var g = document.getElementById('phoneTextList');
    if(currSlide===0) { f.style.transform = "translateY(-0px)"; g.style.transform = "translateY(-0px)"; }
@@ -1002,7 +1002,7 @@ mc.on("swipeup", function(ev) {
 
      }
 
-     if(currSlide>3){currSlide=3; window.scroll(0,700);}
+     if(currSlide>3){currSlide=-1; window.scroll(0,700);}
  
 });
 mc.on("swipedown", function(ev) { 
@@ -1011,9 +1011,9 @@ mc.on("swipedown", function(ev) {
          var f = document.getElementById('gifList');
         var g = document.getElementById('phoneTextList');
         if(currSlide<0){currSlide=0;} 
-   if(currSlide===0) { f.style.transform = "translateY(-0px)"; g.style.transform = "translateY(-0px)"; }
-     if(currSlide===1) { f.style.transform = "translateY(-380px)"; g.style.transform = "translateY(-150px)";}
-     if(currSlide===2)  { f.style.transform = "translateY(-760px)"; g.style.transform = "translateY(-300px)";}
+   if(currSlide===0) {f.style.transform = "translateY(-0px)"; g.style.transform = "translateY(-0px)"; }
+     if(currSlide===1) {f.style.transform = "translateY(-380px)"; g.style.transform = "translateY(-150px)";}
+     if(currSlide===2)  {f.style.transform = "translateY(-760px)"; g.style.transform = "translateY(-300px)";}
      if(currSlide===3)
      {  f.style.transform = "translateY(-1138px)"; g.style.transform = "translateY(-450px)";
      }
