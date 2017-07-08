@@ -2663,18 +2663,17 @@ display:inline;
 }
 .careerText{
 padding-top:380px;
-  color:black;
+  color:white;
   font-family: "adelle-sans", "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:50px;
+  font-size:56px;
 }
 
 @media screen and (max-width:767px)
 {
   .careerText{
-padding-top:360px;
-padding-bottom:270px;
-  color:black;
-  font-size:40px;
+padding-top:270px;
+  color:white;
+  font-size:34px;
 }
 #backgroundWrapper {
       height:100%;
@@ -2720,7 +2719,7 @@ padding:5px; margin:0; color:black; font-size:15px
   line-height: 180%;
   padding-top: 20px;
   padding-bottom:20px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-family: "adelle-sans", "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -2941,9 +2940,12 @@ padding:5px; margin:0; color:black; font-size:15px
  }
 
 @media(max-width:767px){
-  .pressbox{margin-top:-430px;}
+  .pressbox{margin-top:-430px;
+  }
 
   .pressbox img {width:30%;}
+
+  #features{margin-top:-430px;}
 }
 
 button.accordion {

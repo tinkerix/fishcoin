@@ -191,10 +191,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <!-- App Screens -->
     <div class="container full-h" >
-      <div class="row full-h"  >
-        <div id = "phoneScreen1" class="_container__mobile-1--outer is-table full-wh"  >
-          <div class="mobile-1--center v-center" >
-            <div class="mobile-1--content col-sm-7 col-sm-offset-0 col-md-8 col-md-offset-0" >
+      <div class="row full-h">
+        <div  id = "phoneScreen1" class="_container__mobile-1--outer is-table full-wh">
+          <div  class="mobile-1--center v-center" >
+            <div class="mobile-1--content col-sm-7 col-sm-offset-0 col-md-8 col-md-offset-0">
           <div class = "hidden-xs col-sm-12 col-xs-12 col-lg-12 col-md-12">
           <div class="botTextContainer">
           <p class = "botText phoneShow text-center" id = "botText1" >Help others #GetCellFish, <b>Earn Rs. 10,000</b></p>
@@ -215,11 +215,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-
     
-     <div id = mobileDisplayContainer class="visible-xs">
+     <div id = mobileDisplayContainer class="visible-xs"  >
      <div class = "col-xs-12 phoneSeparator"></div>
-     <div class = "phone-text-wrapper">
+     <div class = "phone-text-wrapper" >
      <ul id= "phoneTextList">
         <li> <div class = "text-center phone-text">
            <p class = "heading heading1">Understand your Usage</p>
@@ -241,6 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          </div></li>
          </ul>
      </div>
+
     <!-- <div id = "text1">
       <div class = "text-center" style = "background-color: #F19100; width:100%" >
         <p class = "heading">Understand Your Usage</p>
@@ -288,7 +288,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           </div>
          </div>
-              <!--</div>-->
+          </div>
               <!-- <a href="" target="_blank"><img src="images/playstore.png" /></a> -->
               <!--<div class="hero-cta cta-block is-table" style="visibility: hidden;">
                 <div class="hero-cta--col cta--playstore v-center">
@@ -328,7 +328,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- 2nd Mobile Fold -->
 <div id="howitworks"></div>
 <div class="_container _container__mobile-2 hidden-xs" style="background:linear-gradient(to right,#E6E7E9, #A4A5A9);">
-  <div class="container full-h" >
+  <div class="container full-h hidden-xs" >
     <div class="row full-h">
       
 
@@ -700,7 +700,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Press -->
 
-    <div  id = "news" class="_container _container--press pressbox">
+    <div  class="_container _container--press pressbox hidden-xs">
     <div class = "col-xs-12 col-sm-12">
     <p class = "newsPara"><strong>Tinkerix In The News</strong></p>
     </div>
@@ -735,6 +735,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <!-- Press -->
 <!--Testimonial-->
+<div id = "news"></div>
 <div id="features" class = "col-sm-12 col-xs-12 col-lg-12  col-md-12" style= "background-color:#555555;">
 <div class = "col-sm-12 col-xs-12 col-lg-12 col-md-12 text-center"><h3 style = "color:#DF9720;">User Testimonial</h3></div>
 <div class = "hidden-xs hidden-sm col-md-1 col-lg-1"></div>
@@ -1001,13 +1002,15 @@ mc.on("swipeup", function(ev) {
 
      }
 
-     if(currSlide>3){currSlide=3; window.scroll(0,findPos(document.getElementById("news")));}
+     if(currSlide>3){currSlide=3; window.scroll(0,700);}
  
 });
 mc.on("swipedown", function(ev) { 
-  currSlide--;
+  currSlide--; 
+  window.scroll(0,0);
          var f = document.getElementById('gifList');
         var g = document.getElementById('phoneTextList');
+        if(currSlide<0){currSlide=0;} 
    if(currSlide===0) { f.style.transform = "translateY(-0px)"; g.style.transform = "translateY(-0px)"; }
      if(currSlide===1) { f.style.transform = "translateY(-380px)"; g.style.transform = "translateY(-150px)";}
      if(currSlide===2)  { f.style.transform = "translateY(-760px)"; g.style.transform = "translateY(-300px)";}
