@@ -1002,7 +1002,7 @@ mc.on("swipeup", function(ev) {
 
      }
 
-     if(currSlide>3){currSlide=-1; window.scroll(0,700);}
+     if(currSlide>3){currSlide=0; window.scroll(0,700); f.style.transform = "translateY(-0px)"; g.style.transform = "translateY(-0px)";}
  
 });
 mc.on("swipedown", function(ev) { 
