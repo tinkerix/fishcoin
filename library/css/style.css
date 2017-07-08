@@ -3043,4 +3043,8 @@ div.panel {
 #phoneTextList {
   transition: all 0.7s ease;
 }
+
+.headerSocialIcons {
+  font-size:18px;
+}
 /*# sourceMappingURL=style.css.map */

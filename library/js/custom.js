@@ -927,7 +927,7 @@ function sceneLeave() {
 function sceneEnter() {
 	$('.appscreens--phone-1st-fold').show();
 	$('.appscreens--phone-2nd-fold').hide();
-	moveSlide = setInterval(ui_slider, 3600);
+	moveSlide = setInterval(ui_slider, 2500);
 }
 
 
