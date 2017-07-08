@@ -2940,12 +2940,7 @@ padding:5px; margin:0; color:black; font-size:15px
  }
 
 @media(max-width:767px){
-  .pressbox{margin-top:-430px;
-  }
-
-  .pressbox img {width:30%;}
-
-  #features{margin-top:-430px;}
+  #features{margin-top:-460px;}
 }
 
 button.accordion {
