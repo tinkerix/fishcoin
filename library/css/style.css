@@ -2264,33 +2264,9 @@ input[type=submit] {
 ._container-testimonial {
   padding: 8rem 0 0rem; }
 
-  #testimonialText {
-    background-color:black;
-    text-align:left;
-  }
-#testimonialText { height:305px;
-  padding-top:50px;
-  background-color:#444444;
+.testimonial-text-user {
+  color:#F5A623;
 }
-  #testimonialText h2 {padding-left:20%;
-    padding-top:20%;
-    color:#F5A623;}
-
-@media screen and (max-width: 767px)
-{
-   #logo img {
-height:180%;
-padding-top:0;
-   }
-  #testimonialText { display:none;}
-}
-
-.testimonial--col {
-  margin-bottom: 8rem;
-}
-
-.testimonial--inner {
-  text-align: center; }
 
 .testimonial {
   color: #444444; }
@@ -2311,28 +2287,6 @@ padding-top:0;
     padding:5px 10px 10px 5px;
   }
 
-.testimonee__image {
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  background-image: url(./images/testimonees.png);
-  background-repeat: no-repeat;
-  background-size: 96px;
-  margin-right: 15px; }
-
-.testimonial--col:nth-child(1) .testimonee__image {
-  background-position: 0px top; }
-
-.testimonial--col:nth-child(2) .testimonee__image {
-  background-position: -32px top; }
-
-.testimonial--col:nth-child(3) .testimonee__image {
-  background-position: -64px top; }
-
-.testimonee__name {
-  text-transform: uppercase;
-  color: #444444; }
-
 .lt-ie9 {
   /* ::Press Band*/
   /* ------------------------------------------------------------ */ }
@@ -2347,34 +2301,9 @@ padding-top:0;
   color:white;
 }
 
-
 .teamTitle { color:black;
   font-size:30px;
   font-weight: bold;
-}
-
-
-
-.memberPhoto {overflow:hidden;}
-
-.memberPhoto img {
-  height:200px;
-  width:200px;
-  border-radius:50%;
-}
-
-#ImageonHover img {
-  height:200px;
-  width:200px;
-  border-radius:50%;
-}
-
-.memberPhoto img:hover {
-  opacity: 0.5;
-}
-
-.memberPhoto:hover {
-  visibility: visible;
 }
 
 #team1 {
@@ -2620,7 +2549,7 @@ body.touched .cta--form {
     font-size: 16px;
     text-align:left;
     width:100%;
-    
+    color:black;
     margin-bottom: 10px;
 }
 
@@ -2633,13 +2562,12 @@ body.touched .cta--form {
 display:inline;
 }
 
-/* --Embeding Social Media -- */
-
-#socialEmbed {
-  height:305px;
-  width:350px;
-  overflow:hidden;
+.footerSeparator{
+  background-color: transparent;
+  height:10px;
 }
+
+/* --Embeding Social Media -- */
 
 @media screen and (max-width: 768px)
 {    
@@ -2779,50 +2707,6 @@ padding:5px; margin:0; color:black; font-size:15px
 .firstList img:hover, .secondList img:hover, .thirdList img:hover, .fourthList img:hover{
   opacity:1;
 }
-
-
-.panel1-group .panel1 {
-        border-radius: 0;
-        box-shadow: none;
-        border-color: #EEEEEE;
-    }
-
-    .panel1-default > .panel1-heading {
-        padding: 0;
-        border-radius: 40px 2px 40px 2px;
-        color: #212121;
-        background-color: white;
-        border: 0.1px solid white;
-    }
-
-    .panel1-title {
-        font-size: 14px;
-    }
-
-    .panel1-title > a {
-        display: block;
-        padding: 5px;
-        font-family: "adelle-sans", "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-decoration: none;
-        color:black;
-      }
-   .panel1-body{
-    background-color:transparent;
-    margin-top:-3px;
-    text-align:left;
-    padding:30px;
-    color:white;
-   }
-    .more-less {
-        float: right;
-        color: #212121;
-    }
-
-    a {color:black;}
-
-    .panel1-default > .panel1-heading + .panel1-collapse > .panel1-body {
-        border-top-color: #EEEEEE;
-    }
     /* ----- v CAN BE DELETED v ----- */
     @media only screen and (min-width: 895px) {
 
@@ -2865,6 +2749,10 @@ padding:5px; margin:0; color:black; font-size:15px
   padding-top: 5px;
   padding-bottom: 5px;
   font-size:14px;
+}
+
+.navbar-toggle {
+  border:none;
 }
 
 .navbar-right, .navbar-nav, .nav{
@@ -2999,32 +2887,6 @@ div.panel {
   display:block;
   position:relative;
   width:100%;
-}
-
-.phone-bg-wrapper{
-  margin-left:2%;
-      overflow: hidden;
-    position: absolute;
-    top: 19.7%;
-    left: 8.3%;
-    height: 59.8%;
-    width: 77.5%;
-    background-color: red;
-}
-
-.phone-bg {
-      position: relative;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    opacity: 1;
-}
-
-.phoneScreenWrapper {
-  background-color: red;
-  height:100px;
-  width:100px;
 }
 
 #text1{
