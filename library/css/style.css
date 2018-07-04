@@ -1247,9 +1247,9 @@ input[type=number] {
 
 /* ::Layout styles */
 /* ------------------------------------------------------------ */
-/* -------------------------------- 
+/* --------------------------------
 
-STRUCTURE STYLES 
+STRUCTURE STYLES
 
 -------------------------------- */
 .is-relative {
@@ -1432,9 +1432,9 @@ input[type="button"], input[type="reset"], input[type="submit"] {
   .isTextLeft.minIsTextCenter, .isTextRight.minIsTextCenter {
     text-align: center; } }
 
-/* -------------------------------- 
+/* --------------------------------
 
-MEDIA QUERIES 
+MEDIA QUERIES
 
 -------------------------------- */
 @media (max-width: 480px) {
@@ -2050,7 +2050,7 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     background-color:#EC6E4E;
-}    
+}
     input[type=number]{
     text-align:center;
     font-family:"Helvetica";
@@ -2114,7 +2114,7 @@ input[type=submit] {
   .mobile-2--content .icon-wrapper img {
     width: 85px;
     height: 85px; } }
-    
+
 ._container__mobile-2 {
   padding: 50px 0; }
   ._container__mobile-2--tabs .features-tab-list li {
@@ -2509,9 +2509,9 @@ body.touched .cta--form {
     height: 90%;
     position: relative;
     padding: 0; }
- 
 
-    .footer{    
+
+    .footer{
       color:black;
       width:100%;
 
@@ -2521,21 +2521,21 @@ body.touched .cta--form {
   float:left;
   width:16%;
    color:#949496;
-  }   
+  }
 
-  .unstyled {padding-left: 0;}  
-  
+  .unstyled {padding-left: 0;}
+
   .unstyled li a
   {
    color:black;
    font-size:17px;
    }
-  
+
   .unstyled li a:hover
   {
   text-decoration:underline;
   }
-  
+
   .footer-col li {
     color:black;
   }
@@ -2570,7 +2570,7 @@ display:inline;
 /* --Embeding Social Media -- */
 
 @media screen and (max-width: 768px)
-{    
+{
  .  .footer-col-head {
     border-bottom: 1px solid black;
     padding-bottom:1px;
@@ -2579,7 +2579,7 @@ display:inline;
 
 }
 
-/*Career Page */ 
+/*Career Page */
 #backgroundWrapper {
       height:100%;
       background-image: url('./images/career/thubcareers.jpg');
@@ -2605,7 +2605,7 @@ padding-top:270px;
 }
 #backgroundWrapper {
       height:100%;
-      
+
       background-repeat:  no-repeat;
       background-attachment: fixed;
       background-size:  100% 100%;
@@ -2628,7 +2628,7 @@ padding-top:270px;
 .heading4{background-color:#452583;}
 .sub-heading{
 padding:5px; margin:0; color:black; font-size:15px
-} 
+}
 .phone-text-wrapper{padding:0; margin-top:0px; width:100%; overflow: hidden; height:150px;}
 .phone-text{height:150px; padding:0;margin:0;width:100%;}
 .phoneScreen1 {
@@ -2652,7 +2652,7 @@ padding:5px; margin:0; color:black; font-size:15px
 }
 
 #screenShots {
-  background-color: black; 
+  background-color: black;
   position:absolute;
   top:72px;
   left:32px;
@@ -2694,7 +2694,7 @@ padding:5px; margin:0; color:black; font-size:15px
 #phoneText {
   margin-top:-34px; text-align:center; padding-top:0; width:100%;
   height:180px;
-  
+
 }
 
 .phoneHide {display:none;}
