@@ -1056,8 +1056,10 @@
 
   $(document).ready(function() {
     var domain = location.host ;
+    var ref = document.referrer;
+    console.log("referrer "+ref);
     console.log("domain "+domain);
-    toFishCoin(domain);
+    toFishCoin(ref);
     var owl = $('#owl-demo');
     owl.owlCarousel({
       // Show next and prev button
