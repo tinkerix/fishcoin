@@ -1,6 +1,6 @@
-# robots.txt for http://www.cell.fish/
+# robots.txt for http://www.fishcoin.in/
 
 User-agent: *
-Sitemap: http://www.cell.fish/sitemap.xml
+Sitemap: http://www.fishcoin.in/sitemap.xml
 User-agent: *
 Disallow: /download.html
