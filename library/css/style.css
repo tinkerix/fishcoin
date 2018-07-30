@@ -2910,3 +2910,61 @@ div.panel {
   font-size:18px;
 }
 /*# sourceMappingURL=style.css.map */
+.playstore_pop_up{
+  display: none;
+  position: absolute;
+  width: 99%;
+  height: 300%;
+   background: #F7E1EB;
+  opacity:0.3;
+  z-index: 10;
+}
+.playstore_icon{
+  display: none;
+  width: 80%;
+  top: 30%;
+  left: 3%;
+  color:black;
+  position: fixed;
+  margin: auto 0;
+  font-size: 20px;
+  z-index: 13;
+}
+.playstore_pop_up_p{
+  
+  top: 40%;
+  left: 20%;
+  color:black;
+  font-weight: bold;
+  position: absolute;
+  margin: auto 0;
+  text-align: center;
+  line-height: 65px;
+  font-size: 36px;
+  word-spacing: 9999rem;
+}
+.playstore_pop_up_img{
+  top: 70%;
+  left: 17%;
+  position: absolute;
+  margin: auto 0;
+  font-size: 20px;
+}
+.close_icon{
+  /* position: absolute;
+  float: right;
+  margin-left: 94%; */
+  position: absolute;
+  display: none;
+  z-index: 13;
+  margin-top: 25%;
+  margin-left: 94%;
+  color: black;
+  
+}
+.full-h{
+  position: relative;
+  z-index: 1;
+  /* opacity: 0.3; */
+}
+

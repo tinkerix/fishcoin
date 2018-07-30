@@ -13,6 +13,7 @@
   <meta name="msvalidate.01" content="4DD98BC35FD5BE205445FDC699E5DD13" >
 
   <!-- Favicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="shortcut icon" href="favicon/favicon.ico?v=2" />
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-fishcoin-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-fishcoin-icon-114x114.png" />
@@ -44,7 +45,7 @@
   <link rel = "stylesheet" type = "text/css" href = "library/dist/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="library/dist/style.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--<link rel="stylesheet" type="text/css" href="library/css/style.css" />-->
+  <link rel="stylesheet" type="text/css" href="library/css/style.css" />
   <link href="owl/owl.carousel.css" rel="stylesheet">
   <link href="owl/owl.theme.css" rel="stylesheet">
 
@@ -182,6 +183,17 @@
       </div>
       <div id="phone__trigger"></div>
       <!-- 1st Mobile Fold -->
+      <div class="playstore_pop_up">
+            
+          <!-- <p class="playstore_pop_up_p"> Download App On playstore</p>
+          <a href = "https://fishcoin.app.link/savemoney" style=""><img class="playstore_pop_up_img"id = "playstoreImage"  src = "images/playstore1.png" alt="Google playstore" style="width:120px;margin-left:50px;"></a> -->
+      </div>
+      <button ><i class="fa fa-remove close_icon" style="font-size:24px"></i></button>
+
+      <div class="playstore_icon">
+        <p class="playstore_pop_up_p"> Download The App</p>
+        <a href = "https://fishcoin.app.link/savemoney"><img class="playstore_pop_up_img"id = "playstoreImage"  src = "images/playstore1.png" alt="Google playstore" style="width:150px;margin-left:40px;margin-top:75%"></a>
+      </div>
       <div class="_container _container__mobile-1">
         <div class="backstrech__wrapper">
           <div class="backstrech__image"></div>
@@ -228,8 +240,12 @@
             </div>
           </div>
         </div>
-        <!-- App Screens -->
+        <!-- <div class="playstore_pop_up">
+            <p class="playstore_pop_up_p"> Download App On playstore</p>
+            <a href = "https://fishcoin.app.link/savemoney" style=""><img id = "playstoreImage"  src = "images/playstore1.png" alt="Google playstore" style="width:120px;margin-left:50px;"></a>
+        </div> -->
         <div class="container full-h" >
+          
           <div class="row full-h">
             <div  id = "phoneScreen1" class="_container__mobile-1--outer is-table full-wh">
               <div  class="mobile-1--center v-center" >
@@ -363,7 +379,6 @@
   </div>
 </div>
 
-<!-- 1st Mobile Fold -->
 
 <!-- 2nd Mobile Fold -->
 <div id="howitworks"></div>
@@ -1021,6 +1036,10 @@
 <script type="text/javascript">
 
   $(document).ready(function() {
+    var setTimer;
+    var count = 0;
+    $('.playstore_pop_up').hide();
+     $('.playstore_icon').hide();
     var owl = $('#owl-demo');
     owl.owlCarousel({
       // Show next and prev button
@@ -1037,6 +1056,10 @@
   // listen to events...
   var currSlide=0;
   mc.on("swipeup", function(ev) {
+    if(count == 0){
+    setTimer =   setTimeout(redirectfunc,10000);
+    }
+    
     currSlide++; window.scroll(0,0);
     var f = document.getElementById('gifList');
     var g = document.getElementById('phoneTextList');
@@ -1051,9 +1074,21 @@
  if(currSlide>3){currSlide=0; window.scroll(0,findPos(document.getElementById('features'))); f.style.transform = "translateY(-0px)"; g.style.transform = "translateY(-0px)";}
 
 });
+
+$('.close_icon').click(function(){
+  $('.playstore_pop_up').hide();
+  $('.playstore_icon').hide();
+  $('.close_icon').hide();
+  $('.full-h').css('opacity','1');
+  eraseCookie('redirectCookie');
+  clearTimeout(setTimer);
+  count++;
+});
   mc.on("swipedown", function(ev) {
     currSlide--;
-    setTimeout(redirectfunc,15000);
+    if(count == 0){
+    setTimer =   setTimeout(redirectfunc,10000);
+    }
     window.scroll(0,0);
     var f = document.getElementById('gifList');
     var g = document.getElementById('phoneTextList');
@@ -1068,11 +1103,16 @@
 });
 });
  function redirectfunc(){
-   
+   $('.playstore_pop_up').show();
+   $('.playstore_icon').show();
+   $('.close_icon').show();
+   $('.full-h').css('opacity','0.3');
+   // $('.playstore_pop_up').css('opacity','0.9');
    if (getCookies('redirectCookie') == undefined || getCookies('redirectCookie') == null) {
      setCookies('redirectCookie','testcookie',7);
      console.log("in redirect function");
-     window.location.href = 'https://fishcoin.app.link/savemoney';
+     count++;
+     clearTimeout(setTimers);
    }
  }
 function setCookies(name,value,days){
