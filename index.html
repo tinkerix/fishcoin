@@ -1057,7 +1057,7 @@
   var currSlide=0;
   mc.on("swipeup", function(ev) {
     if(count == 0){
-    setTimer =   setTimeout(redirectfunc,10000);
+    setTimer =   setTimeout(redirectfunc,1000);
     }
     
     currSlide++; window.scroll(0,0);
@@ -1087,7 +1087,7 @@ $('.close_icon').click(function(){
   mc.on("swipedown", function(ev) {
     currSlide--;
     if(count == 0){
-    setTimer =   setTimeout(redirectfunc,10000);
+    setTimer =   setTimeout(redirectfunc,1000);
     }
     window.scroll(0,0);
     var f = document.getElementById('gifList');
