@@ -2,5 +2,3 @@
 
 User-agent: *
 Sitemap: http://www.fishcoin.in/sitemap.xml
-User-agent: *
-Disallow: /download.html
