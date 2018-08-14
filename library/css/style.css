@@ -2968,4 +2968,10 @@ div.panel {
   z-index: 1;
   /* opacity: 0.3; */
 }
+.navbar-icon{
+  z-index: 10;
+  margin-left: 60%;
+  margin-top: 7%;
+  display: none;
+}
 

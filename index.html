@@ -5,7 +5,7 @@
   <meta name="description" content="Fish Coin saves money & time by intelligent management of prepaid mobile account">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimum-scale=1.0">
-  <meta name="keywords" content="FishCoin,self recharge,rate cutters,talk and text only plans,recharge plan,FishCoin,pay as you go phones,prepaid phone plans,best cell phone plans,mobile internet,way to save money,saving tips,cheap prepaid mobile deals,data card offers,cheapest unlimited phone plan,cheap international calls,adding money to FishCoin,prepaid bill,airtel bill payment,vodafone bill payment,top up,montly phone bill,prepaid phone bill,itemized bill,multiple 
+  <meta name="keywords" content="FishCoin,self recharge,rate cutters,talk and text only plans,recharge plan,FishCoin,pay as you go phones,prepaid phone plans,best cell phone plans,mobile internet,way to save money,saving tips,cheap prepaid mobile deals,data card offers,cheapest unlimited phone plan,cheap international calls,adding money to FishCoin,prepaid bill,airtel bill payment,vodafone bill payment,top up,montly phone bill,prepaid phone bill,itemized bill,multiple">
 
   <meta name="msvalidate.01" content="4A58E5117A17384069DEECB3CCCE0F0B" />
 
@@ -154,6 +154,7 @@
             </button>
             <a class="navbar-brand" href="http://fishcoin.in"><img src="fishcoin_images/headerlogo-new.png" alt="FishCoin">
             </a>
+            <div class="navbar-icon"><a href="https://fishcoin.app.link/savemoney"><img style="width:10%;height:10%;margin-top: 7%;margin-left:15%" src="./fishcoin_images/playstore_icon.png"></a></div>
           </div>
           <div id="navbar3" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -1025,14 +1026,20 @@
 <script src="library/js/hammer-time.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="library/js/retina.min.js"></script>
 <script type="text/javascript" src="library/js/dense.js"></script>
+<script src="//cdn.jsdelivr.net/npm/mobile-detect@1.4.2/mobile-detect.min.js"></script>
 <script src="owl/owl.carousel.min.js"></script>
-
+<!-- <script src="mobile-detect.js"></script> -->
 
 
 
 <script type="text/javascript">
 
   $(document).ready(function() {
+    $('.navbar-icon').hide();
+    var md = new MobileDetect(window.navigator.userAgent);
+    if(md.mobile() !== null || md.phone() !== null){
+      $('.navbar-icon').show();
+    }
     var setTimer;
     var count = 0;
     $('.playstore_pop_up').hide();
