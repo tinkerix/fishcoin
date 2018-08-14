@@ -138,6 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
         <a class="navbar-brand" href="http://fishcoin.in"><img src=" fishcoin_images/headerlogo-new.png" alt="FishCoin">
         </a>
+				<div class="navbar-icon"><a href="https://fishcoin.app.link/savemoney"><img style="width:30%;height:30%;margin-bottom: 2%;margin-left:15%" src="./fishcoin_images/playstore_icon.png"></a></div>
       </div>
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -292,6 +293,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
   </div>
 	
+	<script src="//cdn.jsdelivr.net/npm/mobile-detect@1.4.2/mobile-detect.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+	  $('.navbar-icon').hide();
+	  var md = new MobileDetect(window.navigator.userAgent);
+	  if(md.mobile() !== null || md.phone() !== null){
+	    $('.navbar-icon').show();
+	  }
+	});
+	</script>
       <script>
 var acc = document.getElementsByClassName("careeraccordion");
 var careerpanel = document.getElementsByClassName("careerpanel");
