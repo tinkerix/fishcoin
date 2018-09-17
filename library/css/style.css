@@ -2727,7 +2727,7 @@ padding:5px; margin:0; color:black; font-size:15px
 
 /*Career Page */
 
-#playstoreImage {
+#playstoreImage,#playstoreImagePopUp{
   width:100px;
   margin-top:-5px;
   border:3px solid white;
