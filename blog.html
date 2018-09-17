@@ -112,6 +112,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '300040724131531');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=300040724131531&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
   <!--End of header-->
 
 </head>
@@ -133,7 +150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
         <a class="navbar-brand" href="http://fishcoin.in"><img src=" fishcoin_images/headerlogo-new.png" alt="FishCoin">
         </a>
-        <div class="navbar-icon"><a href="https://fishcoin.app.link/savemoney"><img style="width:30%;height:30%;margin-bottom: 2%;margin-left:15%" src="./fishcoin_images/playstore_icon.png"></a></div>
+        <div id="playstoreImageIcon" class="navbar-icon"><a href="https://fishcoin.app.link/savemoney"><img style="width:30%;height:30%;margin-bottom: 2%;margin-left:15%" src="./fishcoin_images/playstore_icon.png"></a></div>
       </div>
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -263,6 +280,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
     </script>
+    <!-- Add Pixel Events to the button's click handler -->
+     <script type="text/javascript">
+       var button = document.getElementById('playstoreImageIcon');
+       button.addEventListener(
+         'click', 
+         function() { 
+           fbq('track', 'InstallClicked');          
+         },
+         false
+       );
+       var button1 = document.getElementById('playstoreImage');
+       button1.addEventListener(
+         'click', 
+         function() { 
+           fbq('track', 'InstallClicked');          
+         },
+         false
+       );
+     </script>
 <script>
 var acc = document.getElementsByClassName("accordion");
 var panels = document.getElementsByClassName("panel");
