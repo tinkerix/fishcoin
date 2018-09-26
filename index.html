@@ -126,7 +126,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="library/dist/bootstrap.min.js"></script>
   <!-- Facebook Pixel Code -->
-  <script>
+  <!-- <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -140,8 +140,24 @@
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=300040724131531&ev=PageView&noscript=1"
-  /></noscript>
+  /></noscript> -->
 <!-- End Facebook Pixel Code -->
+
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2127155744268711');
+    // fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2127155744268711&ev=PageView&noscript=1"
+  /></noscript>
 
   <!--End of header-->
 
@@ -1052,6 +1068,7 @@
 <script type="text/javascript">
 
   $(document).ready(function() {
+    fbq('track', 'PageView FishCoin');
     $('.navbar-icon').hide();
     var md = new MobileDetect(window.navigator.userAgent);
     if(md.mobile() !== null || md.phone() !== null){
@@ -1182,7 +1199,7 @@ function eraseCookie(name) {
    button.addEventListener(
      'click', 
      function() { 
-       fbq('track', 'InstallClicked');          
+       fbq('track', 'InstallClicked fishcoin');          
      },
      false
    );
@@ -1190,7 +1207,7 @@ function eraseCookie(name) {
    button1.addEventListener(
      'click', 
      function() { 
-       fbq('track', 'InstallClicked');          
+       fbq('track', 'InstallClicked fishcoin');          
      },
      false
    );
@@ -1198,7 +1215,7 @@ function eraseCookie(name) {
    button2.addEventListener(
      'click',
      function(){
-       fbq('track','InstallClicked');
+       fbq('track','InstallClicked fishcoin');
      },
      false
    );
