@@ -1066,13 +1066,15 @@
 
 
 <script type="text/javascript">
-
+var setTimer;
+var count = 0;
   $(document).ready(function() {
     fbq('track', 'PageView FishCoin');
     $('.navbar-icon').hide();
     var md = new MobileDetect(window.navigator.userAgent);
     if(md.mobile() !== null || md.phone() !== null){
       $('.navbar-icon').show();
+      setTimer = setTimeout(redirectfunc,8000);
     }
     var setTimer;
     var count = 0;
@@ -1150,7 +1152,7 @@ $('.close_icon').click(function(){
      setCookies('redirectCookie','testcookie',7);
      console.log("in redirect function");
      count++;
-     clearTimeout(setTimers);
+     clearTimeout(setTimer);
    }
  }
 function setCookies(name,value,days){
