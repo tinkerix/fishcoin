@@ -2939,9 +2939,12 @@ div.panel {
   position: absolute;
   margin: auto 0;
   text-align: center;
-  line-height: 45px;
+  line-height: 35px;
   font-size: 30px;
-  word-spacing: 9999rem;
+  /* word-spacing: 9999rem; */
+}
+.nowrap{
+  line-height:80px;
 }
 .playstore_pop_up_img{
   top: 70%;
