@@ -1066,8 +1066,10 @@
 
 
 <script type="text/javascript">
-var setTimer;
+var setTimer,setAutoRedirectTimer;
 var count = 0;
+var timeToRedirect;
+var countAuto = 0;
   $(document).ready(function() {
     fbq('track', 'PageView FishCoin');
     $('.navbar-icon').hide();
@@ -1075,6 +1077,14 @@ var count = 0;
     if(md.mobile() !== null || md.phone() !== null){
       $('.navbar-icon').show();
       setTimer = setTimeout(redirectfunc,8000);
+    }
+    var url_string = window.location;
+    var url = new URL(url_string);
+    if(window.location.search != ""){
+      timeToRedirect = url.searchParams.get("red");
+      console.log("time to redirect" + timeToRedirect);
+    }else{
+      timeToRedirect = 6;
     }
     var setTimer;
     var count = 0;
@@ -1096,6 +1106,10 @@ var count = 0;
   // listen to events...
   var currSlide=0;
   mc.on("swipeup", function(ev) {
+    if(countAuto == 0){
+      console.log("start redirecting");
+      setAutoRedirectTimer = setTimeout(autoredirect,parseInt(timeToRedirect)*1000);
+    }
     if(count == 0){
     setTimer =   setTimeout(redirectfunc,1000);
     }
@@ -1155,6 +1169,13 @@ $('.close_icon').click(function(){
      clearTimeout(setTimer);
    }
  }
+ function autoredirect(){
+  countAuto++;
+  fbq('track', 'PageLoad');
+  window.location.href="https://fishcoin.app.link/savemoney"
+  // clearTimeout(setTimer);
+}
+
 function setCookies(name,value,days){
   var expires = "";
     if (days) {
