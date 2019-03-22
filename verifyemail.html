@@ -3,17 +3,17 @@
     <head>
         <title>CellYogi Email Verification</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <!-- Hotjar Tracking Code for http://fishcoin.in -->
-        <script>
-            (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:950188,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        </script>
+        <!-- Hotjar Tracking Code for http://cell.fish -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:905015,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 		<script type="text/javascript" src="library/js/jquery-2.1.4.min.js"></script>
 
@@ -23,26 +23,43 @@
 			var incomingUrl = window.location.href;
 			tokens = incomingUrl.split('?');
 			if (tokens.length != 2) {
-				$("body").text("CellYogi Email Verification Failed! Invalid Url Supplied");
+				$("body").text("Email Verification Failed! Invalid Url Supplied");
 				return;
 			}
 			params = tokens[1].split('&');
-			if (params.length != 2) {
-				$("body").text("CellYogi Email Verification Failed! Invalid Url Supplied");
+			if (params.length != 4) {
+				$("body").text("Email Verification Failed! Invalid Url Supplied");
 				return;
 			}
 			var emailstr = decodeURIComponent(params[0].substring(6));
 			var key = decodeURIComponent(params[1].substring(16));
-			
-			$.post("https://yogiapi.talkmoreapp.com/v1/user/verifyEmail", {email: emailstr, verificationkey: key}, function(result, status) {
+			var appName = decodeURIComponent(params[2].substring(8));
+			var isProd = decodeURIComponent(params[3].substring(7));
+			var link;
+			if(appName==="CellFish"){
+				if(isProd == true){
+					link = "https://api.cell.fish";
+				}else{
+					link = "https://int.cell.fish";
+				}
+			}else if (appName==="FishCoin"){
+				if(isProd == true){
+					link = "https://api.fishcoin.in";
+				}else{
+					link = "https://int.fishcoin.in";
+				}
+			}else{
+				$("body").text(appName+" Email Verification Failed! Invalid Url Supplied");
+				return;
+			}
+
+			$.post(link+"/v1/user/verifyEmail", {email: emailstr, verificationkey: key}, function(result, status) {
 			// $.post("http://localhost:8080/v1/user/verifyEmail", {email: emailstr, verificationkey: key}, function(result, status) {
 					// alert("Result: " + result + "\nStatus: " + status);
-					$("body").text("CellYogi Email Verification Successful!");
+					$("body").text(appName+" Email Verification Successful!");
 				}).fail(function() {
-					$("body").text("CellYogi Email Verification Failed!");
+					$("body").text(appName+" Email Verification Failed!");
 				});
-			
-
         });
         </script>
     </head>
